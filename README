@@ -1,0 +1,16 @@
+
+luksbackup: a tool for backing up GnuPG keys and entire directories to luks-encrypted devices
+
+* You will probably need to run this as root.
+
+* Note that device names should not include the /dev/ prefix.
+  They are assumed to only consist of the last part, i.e. 'sdb1'.
+
+* Backing up private keys
+** Use the -k flag to back up your private GnuPG keys to a 'gnupg' directory on the target devices
+    usage: ./luksbackup.sh -k device1 device2 ...
+
+* Backing up a directory
+** Use the -d flag to back up a directory
+    usage: ./luksbackup.sh -d srcdir device1 device2 ...
+
